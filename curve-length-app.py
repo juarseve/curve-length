@@ -36,7 +36,7 @@ def calcular_longitud():
 def dibujar_figura():
     radio = entrada1.get()
 
-    if is_float(radio):
+    if is_float(radio) and float(radio) <= 60:
         radio = float(radio)
         if radio < 0.5:
             A = 1
@@ -107,7 +107,7 @@ ttk.Label(master=input_frame, text='Radio (cm):', font="Times 16").pack(side='le
 ttk.Entry(master=input_frame, textvariable=entrada1).pack(side='left', padx=10)
 
 entrada2 = ttk.StringVar()
-ttk.Label(master=input_frame, text='Sub-intervalos:', font="Times 16").pack(side='left')
+ttk.Label(master=input_frame, text='Subintervalos:', font="Times 16").pack(side='left')
 ttk.Entry(master=input_frame, textvariable=entrada2).pack(side='left', padx=10)
 
 input_frame.pack(pady=10)
